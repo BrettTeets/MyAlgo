@@ -15,6 +15,9 @@ internal class Program
         tree.Add(9);
 
         Console.WriteLine(tree.ToString());
+
+        Change.ChangeT? t = Change.MakeChange1(32);
+        Console.WriteLine(t);
     }
 
     private static void DebugArray<T>(T[] array){
