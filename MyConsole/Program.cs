@@ -4,18 +4,17 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        TreeNode<int> tree = new TreeNode<int>(1);
+        tree.Add(2);
+        tree.Add(3);
+        tree.Add(4);
+        tree.Add(5);
+        tree.Add(6);
+        tree.Add(7);
+        tree.Add(8);
+        tree.Add(9);
 
-        
-        double[] array = [1.6, 1.9, 2.3, 8.4, 0.1, 3.2, 7.1, 6.4, 3.3, 9.9, 4.8, 4.2, 6.9, 3.1, 1.2, 7.7, 3.9];
-
-        Console.WriteLine("Before: ");
-        DebugArray(array);
-        
-
-        QuickSort<double>.Sort(array, 0, array.Length-1);
-
-        Console.WriteLine("After: ");
-        DebugArray(array);
+        Console.WriteLine(tree.ToString());
     }
 
     private static void DebugArray<T>(T[] array){

@@ -1,4 +1,6 @@
-﻿namespace BAlgo;
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace BAlgo;
 
 public static class QuickSort<T> where T: IComparable
 {
