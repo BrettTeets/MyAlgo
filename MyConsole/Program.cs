@@ -1,23 +1,34 @@
-﻿using BAlgo;
+﻿using System.Diagnostics;
+using BAlgo;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        TreeNode<int> tree = new TreeNode<int>(1);
-        tree.Add(2);
-        tree.Add(3);
-        tree.Add(4);
-        tree.Add(5);
-        tree.Add(6);
-        tree.Add(7);
-        tree.Add(8);
-        tree.Add(9);
 
-        Console.WriteLine(tree.ToString());
+        Stopwatch watch = new Stopwatch();
+        watch.Start();
+        for(int x = 0; x < 36; x++){
+            Console.WriteLine(Fibonacci.Fib(x));
+        }
+        watch.Stop();
+        Console.WriteLine(watch.Elapsed);
 
-        Change.ChangeT? t = Change.MakeChange1(32);
-        Console.WriteLine(t);
+        watch = new Stopwatch();
+        watch.Start();
+        for(int x = 0; x < 36; x++){
+            Console.WriteLine(Fibonacci.Fib2(x));
+        }
+        watch.Stop();
+        Console.WriteLine(watch.Elapsed);
+
+        watch = new Stopwatch();
+        watch.Start();
+        for(int x = 0; x < 36; x++){
+            Console.WriteLine(Fibonacci.Fib3(x));
+        }
+        watch.Stop();
+        Console.WriteLine(watch.Elapsed);
     }
 
     private static void DebugArray<T>(T[] array){
